@@ -5,35 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FantaBooks</title>
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
-        header { background-color: #333; color: white; padding: 15px 20px; text-align: center; }
+        body { font-family: 'Arial', sans-serif; background-color: #f0f0f0; margin: 0; padding: 0; }
+        header { background-color: #FF69B4; color: white; padding: 20px; text-align: center; font-size: 2.5em; }
+        .intro { background-color: #FFEB3B; padding: 20px; text-align: center; font-size: 1.2em; color: #333; }
+        .search-bar { padding: 10px; width: 80%; margin: 20px auto; display: block; border: 1px solid #ddd; border-radius: 5px; }
         .container { display: flex; flex-wrap: wrap; justify-content: space-around; padding: 20px; }
-        .card { width: 300px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
-        .card img { width: 100%; border-top-left-radius: 10px; border-top-right-radius: 10px; }
+        .card { width: 300px; background: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px; text-align: center; }
+        .card img { width: 100%; border-top-left-radius: 10px; border-top-right-radius: 10px; height: 200px; object-fit: cover; }
         .card-content { padding: 15px; }
-        .add-review-btn { background-color: #333; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 5px; }
+        .add-review-btn, .language-btn { background-color: #FF69B4; color: white; border: none; padding: 10px 15px; cursor: pointer; border-radius: 5px; margin-top: 10px; }
+        .language-btn { background-color: #4CAF50; }
         .message-box { margin-top: 20px; display: flex; justify-content: space-between; }
         input { width: 80%; padding: 10px; border-radius: 5px; border: 1px solid #ddd; }
-        button { width: 15%; background-color: #333; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 5px; }
-        footer { text-align: center; padding: 20px; background-color: #333; color: white; margin-top: 20px; }
+        button { width: 15%; background-color: #FF69B4; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 5px; }
+        footer { text-align: center; padding: 20px; background-color: #FF69B4; color: white; margin-top: 20px; }
+        .language-section { display: flex; justify-content: center; gap: 15px; margin-top: 20px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Welcome to FantaBooks</h1>
-    <p>Explore amazing book reviews and share your thoughts.</p>
+    FantaBooks
 </header>
 
+<div class="intro">
+    <p>Welcome fellow bookworms! FantaBooks is your go-to platform to discover fantastic books from all around the world. Whether you're a fiction fanatic, non-fiction enthusiast, or a manga lover, there's something for everyone. Join the community, share your reviews, and explore the world of books!</p>
+</div>
+
+<input type="text" class="search-bar" placeholder="Search books by title, author, or genre...">
+
 <div class="container">
-    <!-- Placeholder for book reviews (add later) -->
+    <!-- Sample Book Cards -->
     <div class="card">
+        <img src="https://via.placeholder.com/300x200.png?text=Book+Cover" alt="Book Image">
         <div class="card-content">
-            <h2>New Review Coming Soon</h2>
-            <p>Click below to add a new book review to the platform!</p>
+            <h3>Book Title 1</h3>
+            <p>A short description of the book...</p>
             <button class="add-review-btn" onclick="addReview()">Add Review</button>
         </div>
     </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300x200.png?text=Book+Cover" alt="Book Image">
+        <div class="card-content">
+            <h3>Book Title 2</h3>
+            <p>A short description of the book...</p>
+            <button class="add-review-btn" onclick="addReview()">Add Review</button>
+        </div>
+    </div>
+</div>
+
+<div class="language-section">
+    <button class="language-btn" onclick="window.location.href='#english'">English</button>
+    <button class="language-btn" onclick="window.location.href='#hindi'">Hindi</button>
+    <button class="language-btn" onclick="window.location.href='#arabic'">Arabic</button>
+    <button class="language-btn" onclick="window.location.href='#malayalam'">Malayalam</button>
 </div>
 
 <div class="message-box">
